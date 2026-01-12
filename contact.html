@@ -25,4 +25,51 @@
       </nav>
     </div>
   </header>
+   <!-- CONTACT -->
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <h1>Contact</h1>
+        <p class="muted">
+          Remplis le formulaire et on te répond rapidement.
+        </p>
+
+        <div class="info">
+          <div class="info__item"><span class="badge">📍</span> Ouagadougou, Burkina Faso</div>
+          <div class="info__item"><span class="badge">📞</span> +226 70 00 00 00</div>
+          <div class="info__item"><span class="badge">✉️</span> contact@minishop.local</div>
+        </div>
+      </div>
+
+      <form class="form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" placeholder="Ex: ZONGO Natacha" required />
+          <small class="error" data-error-for="name"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="exemple@mail.com" required />
+          <small class="error" data-error-for="email"></small>
+        </div>
+
+        <div class="field">
+          <label for="subject">Sujet</label>
+          <input id="subject" name="subject" type="text" placeholder="Ex: Demande d'infos" required />
+          <small class="error" data-error-for="subject"></small>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Écris ton message..." required></textarea>
+          <small class="error" data-error-for="message"></small>
+        </div>
+
+        <button class="btn" type="submit">Envoyer</button>
+        <p class="success" id="successMsg" hidden>✅ Message envoyé ! (simulation)</p>
+      </form>
+    </div>
+  </section>
+
 </html>
