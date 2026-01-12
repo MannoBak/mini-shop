@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Shop – Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Mini Shop</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav" id="nav">
+        <a class="nav__link" href="index.html">Accueil</a>
+        <a class="nav__link" href="index.html#produits">Produits</a>
+        <a class="nav__link is-active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+   <!-- CONTACT -->
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <h1>Contact</h1>
+        <p class="muted">
+          Remplis le formulaire et on te répond rapidement.
+        </p>
+
+        <div class="info">
+          <div class="info__item"><span class="badge">📍</span> Ouagadougou, Burkina Faso</div>
+          <div class="info__item"><span class="badge">📞</span> +226 70 00 00 00</div>
+          <div class="info__item"><span class="badge">✉️</span> contact@minishop.local</div>
+        </div>
+      </div>
+
+      <form class="form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" placeholder="Ex: ZONGO Natacha" required />
+          <small class="error" data-error-for="name"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="exemple@mail.com" required />
+          <small class="error" data-error-for="email"></small>
+        </div>
+
+        <div class="field">
+          <label for="subject">Sujet</label>
+          <input id="subject" name="subject" type="text" placeholder="Ex: Demande d'infos" required />
+          <small class="error" data-error-for="subject"></small>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Écris ton message..." required></textarea>
+          <small class="error" data-error-for="message"></small>
+        </div>
+
+        <button class="btn" type="submit">Envoyer</button>
+        <p class="success" id="successMsg" hidden>✅ Message envoyé ! (simulation)</p>
+      </form>
+    </div>
+  </section>
+    <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Mini Shop — Projet GitHub (groupe de 3)</p>
+      <a class="footer__link" href="index.html">Retour accueil</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
