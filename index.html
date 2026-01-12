@@ -1,14 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mini-projet</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Shop – Accueil</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header__inner">
+            <a class="brand" href="index.html">
+                <!-- Option: <img src="images/logo.png" alt="Logo" class="brand__logo"> -->
+                <span class="brand__name">Mini Shop</span>
+            </a>
 
+            <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        ☰
+      </button>
+
+            <nav class="nav" id="nav">
+                <a class="nav__link is-active" href="index.html">Accueil</a>
+                <a class="nav__link" href="#produits">Produits</a>
+                <a class="nav__link" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero__inner">
+            <div class="hero__content">
+                <h1>Des produits simples, une page propre.</h1>
+                <p>
+                    Petit projet de collaboration GitHub : une page d’accueil avec des produits (images) et une page de contact.
+                </p>
+                <div class="hero__actions">
+                    <a class="btn" href="#produits">Voir les produits</a>
+                    <a class="btn btn--ghost" href="contact.html">Nous contacter</a>
+                </div>
+            </div>
+
+            <div class="hero__card">
+                <p class="muted">Astuce :</p>
+                <p>
+                    Remplace les images par les vôtres dans <code>images/products/</code> et ajuste les titres/prix.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUITS -->
+    <section class="section" id="produits">
+        <div class="container">
+            <div class="section__head">
+                <h2>Nos produits</h2>
+                <p class="muted">Produits statiques (pas de JSON). Images + texte en dur.</p>
+            </div>
+
+            <div class="grid">
+                <!-- Produit 1 -->
+                <article class="card">
+                    <img class="card__img" src="images/products/p1.jpg" alt="Produit 1">
+                    <div class="card__body">
+                        <h3 class="card__title">Produit 1</h3>
+                        <p class="card__text">Petite description du produit (2 lignes max).</p>
+                        <div class="card__footer">
+                            <span class="price">5 000 FCFA</span>
+                            <button class="btn btn--small" data-product="Produit 1">Détails</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 2 -->
+                <article class="card">
+                    <img class="card__img" src="images/products/p2.jpg" alt="Produit 2">
+                    <div class="card__body">
+                        <h3 class="card__title">Produit 2</h3>
+                        <p class="card__text">Petite description du produit (2 lignes max).</p>
+                        <div class="card__footer">
+                            <span class="price">8 500 FCFA</span>
+                            <button class="btn btn--small" data-product="Produit 2">Détails</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 3 -->
+                <article class="card">
+                    <img class="card__img" src="images/products/p3.jpg" alt="Produit 3">
+                    <div class="card__body">
+                        <h3 class="card__title">Produit 3</h3>
+                        <p class="card__text">Petite description du produit (2 lignes max).</p>
+                        <div class="card__footer">
+                            <span class="price">12 000 FCFA</span>
+                            <button class="btn btn--small" data-product="Produit 3">Détails</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 4 -->
+                <article class="card">
+                    <img class="card__img" src="images/products/p4.jpg" alt="Produit 4">
+                    <div class="card__body">
+                        <h3 class="card__title">Produit 4</h3>
+                        <p class="card__text">Petite description du produit (2 lignes max).</p>
+                        <div class="card__footer">
+                            <span class="price">3 500 FCFA</span>
+                            <button class="btn btn--small" data-product="Produit 4">Détails</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 5 -->
+                <article class="card">
+                    <img class="card__img" src="images/products/p5.jpg" alt="Produit 5">
+                    <div class="card__body">
+                        <h3 class="card__title">Produit 5</h3>
+                        <p class="card__text">Petite description du produit (2 lignes max).</p>
+                        <div class="card__footer">
+                            <span class="price">15 000 FCFA</span>
+                            <button class="btn btn--small" data-product="Produit 5">Détails</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 6 -->
+                <article class="card">
+                    <img class="card__img" src="images/products/p6.jpg" alt="Produit 6">
+                    <div class="card__body">
+                        <h3 class="card__title">Produit 6</h3>
+                        <p class="card__text">Petite description du produit (2 lignes max).</p>
+                        <div class="card__footer">
+                            <span class="price">9 900 FCFA</span>
+                            <button class="btn btn--small" data-product="Produit 6">Détails</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>© <span id="year"></span> Mini Shop — Projet GitHub (groupe de 3)</p>
+            <a class="footer__link" href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <!-- MODAL (Détails produit) -->
+    <div class="modal" id="modal" aria-hidden="true">
+        <div class="modal__backdrop" data-close></div>
+        <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal__head">
+                <h3 id="modalTitle">Détails</h3>
+                <button class="icon-btn" data-close aria-label="Fermer">✕</button>
+            </div>
+            <div class="modal__body" id="modalBody">
+                <!-- Injecté par JS -->
+            </div>
+            <div class="modal__foot">
+                <a class="btn btn--ghost btn--small" href="contact.html">Commander / Contacter</a>
+                <button class="btn btn--small" data-close>Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
